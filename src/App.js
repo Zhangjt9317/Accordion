@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Accordion from "./components/Accordion";
+import Search from "./components/Search";
+import Dropdown from "./components/Dropdown";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const items = [
+    {
+        title: "what is React",
+        content: "frontend js framework"
+    },
+    {
+        title: "why use react",
+        content: "react is favorite framework"
+    },
+    {
+        title: "how u use react?",
+        content: "use it with instruction"
+    }
+];
 
-export default App;
+const options = [
+    {
+        label:'ColorRed',
+        value:'red'
+    }  ,
+    {
+        label:'ColorBlue',
+        value:'blue'
+    },
+    {
+        label:'ColorGreen',
+        value:'green'
+    },
+    {
+        label:'ColorDark',
+        value:'dark'
+    }
+];
+
+export default () => {
+    return (
+        <div>
+            <Dropdown options={options}/>
+        </div>
+        );
+};
